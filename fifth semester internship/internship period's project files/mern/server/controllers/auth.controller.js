@@ -1,0 +1,65 @@
+import user from "../models/user.models.js"
+import bcrypt from "bcrypt"
+import jwt from "jsonwebtoken"
+import dotenv from "dotenv";
+
+dotenv.config();
+
+
+export const signup = async (req,res)=>{
+  const {firstname,email,password} = req.body;
+  if(!firstname || !email|| !password){
+    return res.status(400).json({
+      success:false,message:"all fields are required"});
+  };
+  try{
+    const findUser=await user.findOne({email});
+    if(findUser){
+      return res.status(400).json({
+	success:false,message:"user already exist "});
+    }
+    const hashedpassword = await bcrypt.hash(password,10);
+    console.log(hashedpassword);
+    const newUser = new user({firstname,email,password:hashedpassword});
+    await newUser.save()
+
+    return res.status(200).json({ success:true,message:"sucess saved user "})
+  }
+  catch(err){
+    console.log(err);
+    return res.status(400).json({"signup error":err})  
+  }
+
+
+};
+
+export const signin = async (req,res)=>{
+  const {email,password} = req.body;
+  if(!email|| !password){
+    return res.status(400).json({
+      success:false,message:"all fields are required"});
+  }
+
+  try{
+    const dbuser = await user.findOne({email});
+    const ifpasswordVaild = bcrypt.compare(password,dbuser.password);
+    const {password_,...rest} = dbuser.toObject();
+    const token= jwt.sign({id:rest.id,isAdmin:rest.isAdmin||false,},process.env.JWT_SECRET);
+    res.cookie("acess_token",token).json({sucess:true,message:"success signin",user:rest})
+  }
+  catch(err){
+    console.log(err);
+    return res.status(400).json({"signup error":err})  
+  }
+}
+
+export const signout = (req,res)=>{
+  try{
+    return res.clearCookie('access_token');
+  }catch{
+    return res.status(400).json({error:"Error logout"});
+  }
+
+
+}
+

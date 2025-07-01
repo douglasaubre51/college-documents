@@ -1,0 +1,1 @@
+mongodb+srv://albincl128:albincl128@jackerman.rludzjt.mongodb.net/?retryWrites=true&w=majority&appName=jackerman

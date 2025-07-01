@@ -1,0 +1,51 @@
+# === Node.js (backend and frontend) ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+build/
+
+# === Vite (frontend) ===
+.vite/
+
+# === Environment variables ===
+.env
+.env.*  # e.g., .env.local, .env.development
+
+# === Logs ===
+logs/
+*.log
+*.tsbuildinfo
+
+# === Vim ===
+*.swp
+*.swo
+*.swn
+*.un~
+Session.vim
+.netrwhist
+tags
+.vim/
+
+# === OS/IDE files ===
+.DS_Store
+Thumbs.db
+
+# === MongoDB dump or local data ===
+dump/
+*.mongodb
+
+# === Coverage and test output ===
+coverage/
+*.lcov
+
+# === Optional: ignore backend build (e.g., if using TypeScript or Babel) ===
+backend/dist/
+backend/build/
+
+# === Optional: ignore frontend build (if separate folder) ===
+frontend/dist/
+frontend/build/
+
