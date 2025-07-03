@@ -49,3 +49,104 @@ backend/build/
 frontend/dist/
 frontend/build/
 
+##################################
+# Core LaTeX Auxiliary Files
+##################################
+*.aux
+*.log
+*.toc
+*.out
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex.gz(busy)
+*.bbl
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+
+##################################
+# Glossary / Acronyms / Listings
+##################################
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.nlo
+
+##################################
+# Beamer Presentations
+##################################
+*.nav
+*.snm
+*.vrb
+
+##################################
+# Output Files (Optional)
+##################################
+*.dvi
+*.pdf
+*.ps
+*.xdv
+
+# Uncomment if you want to track PDFs:
+# !*.pdf
+
+##################################
+# Editor & OS Specific
+##################################
+*~
+*.bak
+*.swp
+*.swo
+*.tmp
+*.backup
+*.DS_Store
+Thumbs.db
+
+##################################
+# Editors/IDE Directories
+##################################
+.vscode/
+.idea/
+__MACOSX/
+
+##################################
+# LaTeX Build Systems
+##################################
+# latexmk
+*.latexmk
+
+# arara
+*.run.xml
+*.arara
+
+##################################
+# TeXShop (macOS)
+##################################
+*.texpadtmp
+*.texpadtmp.*
+*.synctex
+
+##################################
+# Temporary folders (custom)
+##################################
+build/
+output/
+_auto/
+auxiliary/
+
+##################################
+# Overleaf project download
+##################################
+*.cls.backup
+*.sty.backup
+
+
