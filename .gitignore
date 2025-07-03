@@ -92,7 +92,7 @@ frontend/build/
 # Output Files (Optional)
 ##################################
 *.dvi
-*.pdf
+
 *.ps
 *.xdv
 
