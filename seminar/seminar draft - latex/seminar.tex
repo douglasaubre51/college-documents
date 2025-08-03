@@ -17,7 +17,7 @@
      \Huge M.A.U.I
 }
 \author{
-    douglasaubre51
+    Allen Bose
 }
 
 \begin{document}
@@ -28,8 +28,8 @@
 % page 1
 \newpage
 \tableofcontents
-\pagenumbering{arabic}
 \newpage
+\pagenumbering{arabic}
 \section{
   Cross Platform Applications
  }
@@ -61,22 +61,57 @@
 
 \vfil
 
-\includegraphics[width=50mm,height=50mm,keepaspectratio]{react native logo.png}
+\begin{center}
+    \includegraphics[width=50mm,height=50mm,keepaspectratio]{react native logo.png}
+    \hfil
+    \includegraphics[width=50mm,height=50mm,keepaspectratio]{flutter-icon.png}
+    \hfil
+    \vfil
+    \includegraphics[width=50mm,height=50mm,keepaspectratio]{uno-platform-logo.png}
+\end{center}
 
 %page 3
 \newpage
 \section{Cross-Platform frameworks of today}
 \subsection{React Native}
 \parbox{\linewidth}{
-    A popular framework created by Facebook inorder to make IOS, android apps from a single codebase.It leverages the already widely used and beloved React JS ui library to build ui instead of xml or swift.Since javascript is lightweight,React Native apps have very quick launch times.Also on debug mode, javascript code changes are applied onto the app
+    A popular framework created by Facebook inorder to make IOS, android apps from a single codebase.It leverages the already widely used and beloved React JS ui library to build ui instead of xml or swift.
+
+    React Native consumes native api's using native modules which is made using JSI (Javascript Interface).JSI is used to connect native ui components and api's of the target platform.React Native maps React code to its native component in build time.This way ui will be fast and responsive just like the default implementation.
+
+    Since javascript is lightweight,React Native apps have very quick launch times.Also on debug mode, javascript code changes are applied onto the app
     within a second or two.All these boost developer productivity and fast prototyping.
 }
 
 \paragraph{Disadvantages}
 \itemize{
-    \item Javascript is notorious for being less secure
-    \item Imature and some features need native code knowledge to implement
+    \item Javascript is notorious for being less secure.
+    \item Imature and some features need native code knowledge to implement.
     \item App sizes can get pretty large, and it will deter protential users.
+    \item Due to javascript not being type safe, there will be a lot of uncaught bugs during runtime.
+    \item A lot of native api's remain inaccessible as React Native is designed to run on both IOS and Android and most native api's are platform specific.
+}
+
+% page 4
+\newpage
+\subsection{Flutter}
+\parbox{\linewidth}{
+    Developed by Google, Flutter is a cross-platform app framework which runs on Dart programming language.Dart is a relatively new compiled language which is made to render UI.
+
+    It's ahead of time compiled nature make the apps made by flutter extremely fast and responsive across different platforms.Also hot reload is almost always less than a second due to DartVM can replace the changed methods and modules directly.
+
+    Flutter can target Windows,Linux,IOS,Andorid and Web.This level of cross-platform support from a single Dart codebase is made possible by using a Skia rendering engine for rendering UI instead of platform specific renderer like other cross-platform frameworks does.
+}
+
+\paragraph{Disadvantages}
+\itemize{
+    \item Android development can become slow since Flutter uses Gradle as the package manager and Gradle is slow and heavy.
+    \item Cannot access native windows or api'safe.
+    \item Skia renederer can add overhead and drain more battery in mobile platforms.
+    \item Doesn't provide access to most native api's.
+    \item IOS,Windows and Linux builds are slower.
+    \item First build will be extremely slow.
+
 }
 
 % last page reference links 
