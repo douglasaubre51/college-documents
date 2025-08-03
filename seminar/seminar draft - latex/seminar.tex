@@ -1,6 +1,13 @@
 \documentclass[14pt]{extarticle}
 \usepackage{fontspec}
 \usepackage{graphicx}
+\usepackage{microtype}
+\usepackage[
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+]{hyperref}
 \setmainfont{Times New Roman}
 \setlength{\parindent}{0pt} %to fix next para starting with space!
 \setlength{\parskip}{1em} %so next para will have space above!
@@ -18,19 +25,63 @@
 \maketitle
 \pagenumbering{gobble}
 
-% next page
+% page 1
 \newpage
+\tableofcontents
 \pagenumbering{arabic}
-
+\newpage
 \section{
   Cross Platform Applications
  }
-A single codebase for multiple platforms.That is the idea behind cross platform applications.Usually when a company makes a software intended for a wider user range they need to make an android app, a web app and a desktop app just to get started.This is quite cumbersome since now you have multiple codebases of varying programming languages that needs to be maintained.
-
-Cross platform applications solves this problem by using only a single codebase to represent the business logic.So now the duplication of code can be avoided and only one codebase need to be maintained which is cheaper and more efficient!They achieve this using cross platform application frameworks.
-
-\centering{
-    \includegraphics[width=100mm,height=100mm,keepaspectratio]{cross-platform-app.jpg}
+\parbox{\linewidth}{
+    A single codebase for multiple platforms.That is the idea behind cross platform applications.Usually when a company makes a software intended for a wider user range they need to make an android app, a web app and a desktop app just to get started.This is quite cumbersome since now you have multiple codebases of varying programming languages that needs to be maintained.
 }
 
+\parbox{\linewidth}{
+    Cross platform applications solves this problem by using only a single codebase to represent the business logic.So now the duplication of code can be avoided and only one codebase need to be maintained which is cheaper and more efficient!They achieve this using cross platform application frameworks.
+}
+
+\begin{center}
+    \includegraphics[width=100mm,height=100mm,keepaspectratio]{cross-platform-app.jpg}
+\end{center}
+
+\newpage
+\section{
+  Cross Platform Frameworks
+ }
+\parbox{\linewidth}{
+    Inorder for an app to be truly cross-platform we need a framework which will build to the specific target platforms.Not all frameworks support all platforms.So the framework we choose will depend on the platforms we have in mind.That said there are a few frameworks that are popular and are widely used.They are
+}
+
+\begin{itemize}
+    \item React Native
+    \item Flutter
+    \item UNO
+\end{itemize}
+
+\vfil
+
+\includegraphics[width=50mm,height=50mm,keepaspectratio]{react native logo.png}
+
+%page 3
+\newpage
+\section{Cross-Platform frameworks of today}
+\subsection{React Native}
+\parbox{\linewidth}{
+    A popular framework created by Facebook inorder to make IOS, android apps from a single codebase.It leverages the already widely used and beloved React JS ui library to build ui instead of xml or swift.Since javascript is lightweight,React Native apps have very quick launch times.Also on debug mode, javascript code changes are applied onto the app
+    within a second or two.All these boost developer productivity and fast prototyping.
+}
+
+\paragraph{Disadvantages}
+\itemize{
+    \item Javascript is notorious for being less secure
+    \item Imature and some features need native code knowledge to implement
+    \item App sizes can get pretty large, and it will deter protential users.
+}
+
+% last page reference links 
+\newpage
+\section{Reference Links}
+\href{https://techexactly.com/blogs/advantages-and-disadvantages-of-using-react-native}{click to get React Native Research}
+% end of line 
 \end{document}
