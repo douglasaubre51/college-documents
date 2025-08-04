@@ -98,6 +98,9 @@
     \item App sizes can get pretty large, and it will deter protential users.
     \item Due to javascript not being type safe, there will be a lot of uncaught bugs during runtime.
     \item A lot of native api's remain inaccessible as React Native is designed to run on both IOS and Android and most native api's are platform specific.
+    \item JSI will be an overhead when there is a lot of api's calls and heavy computation workloads needed to be done using api's.
+    \item Since javascript is single threaded by design large computations can block the main thread.
+    \item As the app size grows, the complexity of maintaining also increases exponentially.
 }
 
 % page 5
@@ -203,7 +206,7 @@ In order to solve the lack of performance and limited access to native api's on 
     MAUI
 }
 \item \href{
-    https://www.google.co.in/books/edition/NET_MAUI_in_Action/cgDLEAAAQBAJ?hl=en&gbpv=1&dq=.net+maui&pg=PA1&printsec=frontcover
+    https://learn.microsoft.com/en-us/training/modules/build-mobile-and-desktop-apps/2-describe-maui-architecture?WT.mc_id=dotnet-35129-website&ns-enrollment-type=learningpath&ns-enrollment-id=learn.dotnet-maui.build-apps-with-dotnet-maui
 }{
     MAUI [2]
 }
